@@ -4,7 +4,7 @@ from shapely.geometry import shape
 from shapely.geometry import LineString
 
 
-class distance:
+def distance():
     # value = input("Enter value: ")
     message = {
                "geojson":"{\"type\": \"Polygon\", \"coordinates\": [[[19.936901, 50.062682], [19.935745, 50.061403], [19.937697, 50.060558], [19.938877, 50.062003]]]}"
@@ -28,4 +28,4 @@ class distance:
 
     result = {"distance": distance}
 
-    print(result)
+    return result
