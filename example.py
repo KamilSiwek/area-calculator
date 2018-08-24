@@ -7,6 +7,7 @@ pointsOfArea = {
         }
 
 verifiedPoint = (19.937032, 50.061587)
+ellps = "hough"
 
 # calculate area:
 area = Calculate.area(pointsOfArea)
@@ -17,7 +18,7 @@ circumference = Calculate.circumference(pointsOfArea)
 print("Circumference: {}".format(circumference))
 
 # calculate distance:
-distance = Calculate.distance(pointsOfArea)
+distance = Calculate.distance(pointsOfArea, ellps='SGS85')
 print("Distance: {}".format(distance))
 
 # checking if the point is in a given area:
