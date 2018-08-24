@@ -1,5 +1,3 @@
-# area-calculator
-
 # AREA-CALCULATOR
 
 Package to:
