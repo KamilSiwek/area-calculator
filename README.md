@@ -75,8 +75,11 @@ Calculate.distance(pointsOfArea, ellps='SGS85')
 ```
 
 List of ellipsoids:
-- MERIT a=6378137.0      rf=298.257       MERIT 1983
-- SGS85 a=6378136.0      rf=298.257       Soviet Geodetic System 85
+| code | a | rf | date |
+| ---- | - | -- | ---- |
+| MERIT a=6378137.0 | rf=298.257 | MERIT 1983 |
+| SGS85 a=6378136.0 | rf=298.257 | Soviet Geodetic System 85 |
+
 - GRS80 a=6378137.0      rf=298.257222101 GRS 1980(IUGG, 1980)
 - IAU76 a=6378140.0      rf=298.257       IAU 1976
 - airy a=6377563.396     b=6356256.910    Airy 1830
