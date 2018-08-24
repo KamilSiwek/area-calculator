@@ -1,9 +1,6 @@
 """Example file to call methods."""
 
-from calculate import Area
-from calculate import Distance
-from calculate import Circumference
-from calculate import Contains
+from calculate2 import Calculate
 
 pointsOfArea = {
     	   "geojson":"{\"type\": \"Polygon\", \"coordinates\": [[[19.936901, 50.062682], [19.935745, 50.061403], [19.937697, 50.060558], [19.938877, 50.062003]]]}"
@@ -12,17 +9,17 @@ pointsOfArea = {
 verifiedPoint = (19.937032, 50.061587)
 
 # calculate area:
-area = Area.area(pointsOfArea)
+area = Calculate.area(pointsOfArea)
 print("Area: {}".format(area))
 
 # calculate circumference:
-circumference = Circumference.circumference(pointsOfArea)
+circumference = Calculate.circumference(pointsOfArea)
 print("Circumference: {}".format(circumference))
 
 # calculate distance:
-distance = Distance.distance(pointsOfArea)
+distance = Calculate.distance(pointsOfArea)
 print("Distance: {}".format(distance))
 
 # checking if the point is in a given area:
-contains = Contains.contains(pointsOfArea, verifiedPoint)
+contains = Calculate.contains(pointsOfArea, verifiedPoint)
 print("Contains: {}".format(contains))
