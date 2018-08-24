@@ -7,8 +7,8 @@ from shapely.geometry import LineString
 from shapely.geometry import Point
 
 
-class Area():
-    """Class to calculate area."""
+class Calculate():
+    """Class to calculate."""
 
     @staticmethod
     def area(pointsOfArea):
@@ -30,10 +30,6 @@ class Area():
         # Preperate result in dict:
         result = {"area": area}
         return result
-
-
-class Distance():
-    """Class to calculate distance between given points."""
 
     @staticmethod
     def distance(pointsOfArea):
@@ -59,10 +55,6 @@ class Distance():
 
         return result
 
-
-class Circumference():
-    """Class to calculate circumference of the area."""
-
     @staticmethod
     def circumference(pointsOfArea):
         """Method to calculate circumference of the area."""
@@ -85,10 +77,6 @@ class Circumference():
 
         return result
 
-
-class Contains():
-    """Class to calculate contains."""
-
     @staticmethod
     def contains(pointsOfArea, verifiedPoint):
         """Method for checking if the point is in a given area."""
@@ -97,8 +85,6 @@ class Contains():
         """verifiedPoint is point for example: (19.937032, 50.061587)"""
         # Get geojson from request:
         geo = json.loads(pointsOfArea["geojson"])
-
-        # verifiedPoint = (19.937032, 50.061587)
 
         # Checking if the point is in a given area(by shapely):
         points = shape(geo).contains(Point(verifiedPoint))
