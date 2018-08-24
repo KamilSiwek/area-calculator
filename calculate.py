@@ -11,7 +11,7 @@ class Calculate():
     """Class to calculate."""
 
     @staticmethod
-    def area(pointsOfArea):
+    def area(pointsOfArea, ellps='WGS84'):
         """Method to calculate area."""
         # Get geojson from request:
         geo = json.loads(pointsOfArea["geojson"])
@@ -20,7 +20,7 @@ class Calculate():
         lng, lat = zip(*geo["coordinates"][0])
 
         # Project area of interest (By pyproj):
-        pa = Proj("+proj=aea ")
+        pa = Proj("+proj=aea ", ellps=ellps)
         x, y = pa(lng, lat)
 
         # Calculate area(by shapely):
@@ -32,7 +32,7 @@ class Calculate():
         return result
 
     @staticmethod
-    def distance(pointsOfArea):
+    def distance(pointsOfArea, ellps='WGS84'):
         """Method to calculate distance between given points."""
         # Get geojson from request:
         geo = json.loads(pointsOfArea["geojson"])
@@ -41,7 +41,7 @@ class Calculate():
         lng, lat = zip(*geo["coordinates"][0])
 
         # Project area of interest (By pyproj):
-        p = Proj(proj='utm', ellps='WGS84')
+        p = Proj(proj='utm', ellps=ellps)
         x, y = p(lng, lat)
 
         # Calculate length(by shapely):
@@ -56,7 +56,7 @@ class Calculate():
         return result
 
     @staticmethod
-    def circumference(pointsOfArea):
+    def circumference(pointsOfArea, ellps='WGS84'):
         """Method to calculate circumference of the area."""
         # Get geojson from request:
         geo = json.loads(pointsOfArea["geojson"])
@@ -65,7 +65,7 @@ class Calculate():
         lng, lat = zip(*geo["coordinates"][0])
 
         # Project area of interest (By pyproj):
-        p = Proj(proj='utm', ellps='WGS84')
+        p = Proj(proj='utm', ellps=ellps)
         x, y = p(lng, lat)
 
         # Calculate circumference(by shapely):
