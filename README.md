@@ -2,7 +2,7 @@
 
 # AREA-CALCULATOR
 
-Puckage to:
+Package to:
 * calculate area and circumference points of takes location.
 * calculate distance betweet points of takes location.
 * checking if the point is in a given area
