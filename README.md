@@ -3,7 +3,8 @@
 Package to:
 * calculate area and circumference points of takes location.
 * calculate distance betweet points of takes location.
-* checking if the point is in a given area
+* checking if the point is in a given area.
+
 having regard to the earth model (default WGS84)
 
 ## Technologies
