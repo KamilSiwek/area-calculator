@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="area_calculator_codepany",
-    version="0.0.1",
+    version="0.0.2",
     author="Codepany",
     author_email="contact@codepany.com",
     description="Package to: calculate area and circumference points of takes location; calculate distance betweet points of takes location; checking if the point is in a given area. Package having regard to the earth model (default WGS84)",
