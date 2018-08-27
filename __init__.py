@@ -1,1 +1,1 @@
-name = area-calculator
+name = area_calculator

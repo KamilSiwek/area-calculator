@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="area-calculator",
+    name="area_calculator",
     version="0.0.1",
     author="Codepany",
     author_email="contact@codepany.com",
