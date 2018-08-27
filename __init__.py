@@ -1,1 +1,1 @@
-name = area_calculator
+name = area_calculator_codepany
